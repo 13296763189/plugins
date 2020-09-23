@@ -1,0 +1,121 @@
+@charset "utf-8";
+/*城市弹层*/
+body{
+    overflow-x: hidden;
+}
+.city-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    overflow: auto;
+    background-color: #ffffff;
+    z-index: 9999;
+    transition:.5s;
+    display: none;
+    font-size:0.43rem;
+}
+.city-container::-webkit-scrollbar{
+    display:none;
+}
+.letter {
+    width: 5%;
+    overflow: hidden;
+    line-height: 0.6rem;
+    font-size: 0.4rem;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.2rem;
+    bottom:0.5rem;
+    text-align: center;
+}
+
+.letter ul {
+    list-style-type: none;
+}
+
+.letter ul li a {
+    text-decoration: none;
+}
+
+.city {
+    width: 90%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.city-list {
+    width: 100%;
+    overflow: hidden;
+}
+
+.city-list .city-letter {
+    color: #6e6e6e;
+    font-size: 0.5rem;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e8ecf1;
+    width: 100%;
+}
+
+.city-list p {
+    color: #afafaf;
+    width: 95%;
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: 1px solid #e8ecf1;
+    cursor: pointer;
+}
+
+.UISelect {
+    margin-top: 5px
+}
+
+.city-container ul, .city-container li, .city-container p {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+ul, li, dl, dt, dd {
+    display: block;
+    list-style: none;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.clear {
+    background: none;
+    border: 0;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.none {
+    display: none;
+}

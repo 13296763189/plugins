@@ -1,0 +1,21 @@
+//版本要为1.0.0.r1,r5有问题
+
+function canvas() {
+			var copyDom = $(".wrap"); //要保存的dom
+			var width = copyDom.width(); //dom宽
+			var height = copyDom.height(); //dom高
+			var scale = 2; //放大倍数
+			html2canvas(copyDom[0], {
+			    dpi: window.devicePixelRatio*2,
+			    scale: scale,
+			    width: width,
+			    heigth: height,
+			    useCORS: true // 【重要】开启跨域配置
+			}).then(function (canvas) { //1.0.0版本的有then方法
+			    
+				//返回图片dataURL，参数：图片格式和清晰度(0-1) 
+			    var dataURL = canvas.toDataURL("image/png", 1.0);
+				var $img = $('<img class="full-pic" src=' + dataURL + '>')
+				$('.contain').append($img)
+			})
+		}
