@@ -1,0 +1,17 @@
+ <video :src="item.link" :id="'myVideo'+item.id" class="video-js vjs-default-skin vjs-big-play-centered"></video>
+
+functionnewVideo(id,vdoSrc){
+                document.getElementById(id).src = vdoSrc;
+                var myVideo = videojs(id, {
+                    controls: true,
+                })
+                if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
+                    myVideo.src({
+                        src: vdoSrc,
+                        type: 'application/x-mpegURL' //在重新添加视频源的时候需要给新的type的值
+                    })
+                } else {
+                    myVideo.src(vdoSrc);
+                }
+                myVideo.load();
+            },
